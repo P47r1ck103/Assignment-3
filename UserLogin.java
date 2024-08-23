@@ -2,7 +2,7 @@ package com.coderscampus.assignment3;
 
 import java.util.Scanner;
 
-public class UserLogin {
+public class UserLogin extends UserLoginApplication {
 	
 //	simulate reading user data from a file and storing it in an array
 	private static User[] userDatabase = new User[] {
@@ -21,7 +21,7 @@ public class UserLogin {
 		System.out.println("Enter your password: ");
 		String password = scanner.nextLine();
 		
-//		validating the username/password combination
+//		validating the userName/password combination
 		User user = validateLogin(email, password);
 		if (user != null) {
 			System.out.println("Login successful! Welcome, " + user.getName() + "!");
